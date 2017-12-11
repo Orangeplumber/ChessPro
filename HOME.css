@@ -1,0 +1,234 @@
+	/**{
+		border: 1px solid black;
+		}*/
+		body,h1,h2,h3,h4,h5,h6 {font-family: 'Ubuntu', sans-serif;}
+		.user{
+			background-color:#1c1819;
+			color: white;
+			height: 90vh;
+			margin: 0px;
+			}
+			.main{background-color:#dbdcdd;
+				height:90vh;
+				padding: 0%;
+				margin: 0px;
+			}
+
+			.side{
+			background-color:#1c1819;
+			color: white;
+			height:90vh;
+			margin: 0px;
+		}
+		.head
+		{
+			height:10vh;
+		}
+		
+		.header{
+			background-color: #ffffff;
+			margin: 0px;
+		}
+		.options{
+			position: relative;
+			top: 0px;
+			left: 85%;
+			margin:0px;
+		}
+		.lout{
+			
+			text-decoration: none;
+			font-size: 20px;
+			color: white;
+		}
+		
+		
+		.account{
+			position: absolute;
+			top: 530px;
+			left: 20px;
+			margin: auto;
+		}
+
+
+	/*	side-nav*/
+#sideuser {
+    height: 95%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    color: white;
+    top: 60px;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#sideuser #close{
+	position: absolute;
+	top: 0px;
+	right: 25px;
+	color: white;
+}
+
+
+		@media only screen and (min-width: 1400px)
+		{
+			.user{
+				width: 20%;
+			}
+			.main{
+				width: 60%;
+			}
+			.side{
+				width: 20%;
+			}
+			.contain{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			#side-button, #SideB{
+				display: none;
+				margin:0;
+				width: 0;
+			}
+			#sideuser{
+				display: none;
+				margin:0px;
+				width: 0px;
+			}
+
+			.board{
+			width: 800px;
+			height: 800px;
+			margin:auto;
+			position: relative;
+			top: 5%;
+			}
+		
+		}
+		@media only screen and (min-width:1151px) and (max-width: 1399px)
+		{
+			.user{
+				display: none;
+				width: 0px;
+				margin:0px;
+			}
+			.contain{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.main{
+				width: 80%;
+			}
+			.side{
+				width: 20%;
+			}
+			#side-button{
+			 position: absolute;
+			 top: 80px;
+			 left: 5px;
+			 color:black;
+			 text-decoration: none;
+			 border: none;
+			 
+			}
+			#SideB{
+				width: 50px;
+				height: 40px;
+				box-shadow: 2px 5px 3px grey;
+			}
+			.board{
+			width: 800px;
+			height: 800px;
+			margin:auto;
+			position: relative;
+			top: 5%;
+			}
+		}
+		@media only screen and (min-width: 920px) and (max-width: 1150px){
+			.user{
+				display: none;
+				width: 0;
+				margin:0;
+			}
+			.contain{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.main{
+				width: 80%;
+			}
+			.side
+			{
+				width: 20%;
+			}
+			#side-button{
+			 position: absolute;
+			 top: 80px;
+			 left: 5px;
+			 color:black;
+			 text-decoration: none;
+			 border: none;
+			 
+			}
+			canvas{
+				width: 600px;
+				height: 600px;
+			}
+
+			.board{
+			width: 600px;
+			height: 600px;
+			margin:auto;
+			position: relative;
+			top: 10%;
+			}
+
+		
+		}
+		@media only screen and (max-width:919px){
+
+			.user{
+				display: none;
+				width: 0;
+				margin:0;
+			}
+			.contain{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.main{
+				width: 70%;
+			}
+			.side
+			{
+				width: 30%;
+			}
+			#side-button{
+			 position: absolute;
+			 top: 80px;
+			 left: 5px;
+			 color:black;
+			 text-decoration: none;
+			 border: none;
+			 
+			}
+			canvas{
+				width: 500px;
+				height: 500px;
+			}
+
+			.board{
+			width: 500px;
+			height: 500px;
+			margin:auto;
+			position: relative;
+			top: 15%;
+			}
+
+		
+		}		
+	

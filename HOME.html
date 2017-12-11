@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME PAGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="HOME.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="timer.js"></script>
+  <script type="text/javascript">
+
+  	function sidenav(){
+  		document.getElementById('sideuser').style.display="block";
+  		document.getElementById('sideuser').style.width="300px";
+
+  	}
+  	function closenav(){
+  		document.getElementById('sideuser').style.display="none";
+  		document.getElementById('sideuser').style.width="0px";
+  	}
+  </script>
+</head>
+
+<body>
+<div class="container-fluid" style="margin: 0px;padding:0px;">
+		<!-- HEADER PART -->
+	<div class="row head" style="margin:0px;">
+		<div class="header">
+			<span style="font-size: 40px;">32</span>
+			<span class="options">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="margin-right: 10px;"><span class="caret"></span></button>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">Change UserName</a></li>
+			    <li><a href="#">Change Password</a></li>
+			  </ul>
+			<a class="lout" href="#"><i class="fa fa-power-off" aria-hidden="true" style="color: blue;"></i><span style="color: black;">LOGOUT</span></a>
+		</div>
+	</div>
+
+	<div id="side-button" onclick="sidenav();"><button id="SideB"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></button>
+	</div>
+
+
+		<!-- CENTER PART -->
+	<div class="row contain" style="margin: 0px;">
+		<div class="user">
+				<!-- <table class="table">
+					<tr>
+					<td>UserName-</td>
+					<td><p>HARVY</p></td>
+					</tr>
+					<tr>
+					<td>Number Of Games Won:-</td>
+					<td><p></p></td>
+					</tr>
+					<tr>
+					<td>Number Of Games Lost:-</td>
+					<td><p></p></td>
+					</tr>
+				</table>
+				<div class="account">
+					<h4>YOUR WALLET</h4>
+				<table class="table"	>
+					<tr>
+						<td>Balance:-</td>
+						<td>NULL</td>
+					</tr>
+					<tr>
+						<td>MONEY WON:-</td>
+						<td>0.00 RS</td>
+					</tr>
+				</table>
+
+				<button type="button" class="add" style="color: white; background-color: #7b87e0;">VIEW</button>
+			</div>
+		 -->	
+	 	<div id="userinfo" style="margin:auto;padding: 5px;">
+		 	<h3>User Name: <p id="uname" style="display: inline-block;">HARVY</p></h3>	
+		 	<br>
+		 	<h4>NUMBER OF GAMES WON: <p id="uwon" style="display: inline-block;"></p></h4>
+		 	<h4>NUMBER OF GAMES LOST: <p id="ulost" style="display: inline-block;"></p></h4>
+		 	<br><br><br>
+		 	<h3 align="center;">YOUR WALLET: </h3><br>
+		 	<h4>Balance: <p id="uwon" style="display: inline-block; margin-left: 5px;">0.00 RS</p></h4>
+		 	<h4>Money Won: <p id="ulost" style="display: inline-block; margin-left: 5px;">0.00Rs.</p></h4>
+
+	 	</div>
+
+		<div id="countTime" style="color: black;width: 100px;height: 30px;font-size: 20px;background-color: white;">
+						
+		</div>
+ 	</div>
+
+		<div id="sideuser">
+			<div id="close" onclick="closenav();">
+				<i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+			</div>
+			<div id="userinfo" style="margin:auto;padding: 5px;">
+			 	<h3>User Name: <p id="uname" style="display: inline-block;">HARVY</p></h3>	
+			 	<br>
+			 	<h4>NUMBER OF GAMES WON: <p id="uwon" style="display: inline-block;"></p></h4>
+			 	<h4>NUMBER OF GAMES LOST: <p id="ulost" style="display: inline-block;"></p></h4>
+			 	<br><br><br>
+			 	<h3 align="center;">YOUR WALLET: </h3><br>
+			 	<h4>Balance: <p id="uwon" style="display: inline-block; margin-left: 5px;">0.00 RS</p></h4>
+			 	<h4>Money Won: <p id="ulost" style="display: inline-block; margin-left: 5px;">0.00Rs.</p></h4>
+		 	</div>
+	 	</div>
+
+		<div class="main">
+			<div class="board" id="b">
+				<canvas id="mycanvas" width="800" height="800"></canvas>
+<script>
+	var c = document.getElementById("mycanvas");
+
+var ctx = c.getContext("2d");
+var w=0,h=0;
+
+var W=document.getElementById("mycanvas").width;
+var H=document.getElementById("mycanvas").height;
+console.log(W);
+console.log(H);
+
+for (var i = 0; i <= 7; i++) {
+w=0;
+		for (var j = 0; j<=7; j++){
+			if((i+j)%2==0)
+			{
+				ctx.fillStyle = "#63440b";
+				ctx.fillRect(w, h, W/8, W/8);
+						}
+			else
+			{
+				ctx.fillStyle = "white";
+				ctx.fillRect(w, h, W/8, W/8);
+			
+			}
+		w=w+W/8;
+		}
+		h=h+W/8;}
+	var x = document.createElement("rook");
+    x.setAttribute("src", "br.png");
+    x.setAttribute("width", "W/8");
+    x.setAttribute("height", "W/8");
+	ctx.drawImage(x,0,0);
+	
+	</script>							
+			</div>
+		</div>
+
+		<div class="side">
+			<div class="gamemoves">
+				<h4 align="center">MOVES</h4>
+				<div class="box" style="height: 60px; width: 50%; margin:auto; background-color: white;"></div>
+				
+				<button type="button" style="background-color: #31c421; color: white; width: 50%; height: 30px; border-radius: 2%; size: 20px; margin: 2% 25% 2% 25%;" onclick="timer();"><p>PLAY</p></button>
+			</div>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
